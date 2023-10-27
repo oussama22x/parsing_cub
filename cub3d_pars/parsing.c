@@ -11,22 +11,18 @@ void get_x_y_of_the_player(t_all **all)
             if(c == 'N')
             {
                 return ;
-                (*all)->player_angel = 0; //to comeback later
             }
             if(c == 'S')
             {
                 return ;
-                (*all)->player_angel = 0; //to comeback later
             }
             if(c == 'E')
             {
                 return ;
-                (*all)->player_angel = 0; //to comeback later
             }
             if(c == 'W')
             {
                 return ;
-                (*all)->player_angel = 0; //to comeback later
             }
         (*all)->y++;
         }
@@ -50,8 +46,8 @@ int all_in_one(t_all **all, t_textr **txtr,  char **argv)
     (*all)->fd = open(argv[1], O_RDONLY);
     if((*all)->fd == -1)
     {
-        perror("file error\n");
-         return (-1);
+        perror("file error -->\n");
+        return (-1);
     }
     init_all(all);
     get_map(all, (*all)->fd);

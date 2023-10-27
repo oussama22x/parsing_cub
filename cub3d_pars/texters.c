@@ -10,16 +10,22 @@ void fix_map(t_all **all, int len)
     i = 0;
     x = 0; 
     
-    new_map =  calloc(sizeof(char *) ,  (*all)->y_of_map + 1);
+    new_map =  calloc(sizeof(char *) ,  (*all)->y_of_map + 2);
     while(i <  (*all)->y_of_map)
     {
-        new_map[i] = calloc(sizeof(char) , len + 1);
+        new_map[i] = calloc(sizeof(char) , len + 2);
         i++;
     }
     i = 0;
     while(i < (*all)->y_of_map)
     {
-        strcpy(new_map[i], (*all)->map[i]);
+        x  = 0;
+        while((*all)->map[i][x])
+        {
+            new_map[i][x] = (*all)->map[i][x];
+            x++;
+        }
+        new_map[i][x] = '\0';
         i++;
     }
     new_map[i] = NULL;
@@ -72,7 +78,6 @@ int ft_atoi_num(t_textr *txt)
 
 unsigned int RGBtoUint8(int R, int G, int B) 
 {
-    printf("%lu\n\n", sizeof(int));
     return ((0xFF << 24) | (R << 16) | (G << 8) | B);
 }
 

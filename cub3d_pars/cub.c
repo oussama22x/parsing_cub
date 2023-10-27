@@ -120,47 +120,47 @@ int helper(unsigned int *arr, char *str)
 //     }
 //     mlx_loop((*all)->mlx);
 // }
-int main(int argc, char *argv[])
-{
-    t_all *all;
-    t_textr *txtr;
-    int len;
-    len = 0;
+// int main(int argc, char *argv[])
+// {
+//     t_all *all;
+//     t_textr *txtr;
+//     int len;
+//     len = 0;
     
-   if(argc > 1)
-   {
-   if (check_extionts(argv[1]) == -1 || all_in_one(&all, &txtr, argv) == -1)
-   {
-        printf("ERROR\n");
-        return(0);
-   }
-    len = updatemap(all);
-    count_x_y_of_the_map(&all);
-    fix_map(&all, len);
-    if((check_if_close(all->map)) == -1)
-    {
-        printf("ERROR1\n");
-        return -1;
-    }
-    if(check_for_valid_map(all->map) == -1)
-    {
-        printf("ERROR2\n");
-        return(-1);
-    }
-    if(check_final(txtr) == -1)
-    {
-       printf("ERROR3\n");
-        return (-1);
-    }
-    if(ft_atoi_num(txtr) ==  -1)
-    {
-        printf("ERROR4\n");
-        return(-1);
-    }
-    get_colers(txtr);
-   }
-   else 
-    printf("messing file map ☠️ 👽\n");
-    return(0);
-}
+//    if(argc > 1)
+//    {
+//    if (check_extionts(argv[1]) == -1 || all_in_one(&all, &txtr, argv) == -1)
+//    {
+//         printf("ERROR\n");
+//         return(0);
+//    }
+//     len = updatemap(all);
+//     count_x_y_of_the_map(&all);
+//     fix_map(&all, len);
+//     if((check_if_close(all->map)) == -1)
+//     {
+//         printf("ERROR1\n");
+//         return -1;
+//     }
+//     if(check_for_valid_map(all->map) == -1)
+//     {
+//         printf("ERROR2\n");
+//         return(-1);
+//     }
+//     if(check_final(txtr) == -1)
+//     {
+//        printf("ERROR3\n");
+//         return (-1);
+//     }
+//     if(ft_atoi_num(txtr) ==  -1)
+//     {
+//         printf("ERROR4\n");
+//         return(-1);
+//     }
+//     get_colers(txtr);
+//    }
+//    else 
+//     printf("messing file map ☠️ 👽\n");
+//     return(0);
+// }
 

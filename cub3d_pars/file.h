@@ -6,7 +6,7 @@
 #include "libft/libft.h"
 #include "get_line/get_next_line.h"
 #include <mlx.h>
-
+#include <math.h>
 typedef struct s_textr
 {
     char **NO;
@@ -31,12 +31,13 @@ typedef struct s_all
     int bits_per_pixel;
     int size_line;
     int endian;
-    int player_angel;
+    double player_angel;
     int fd;
     int y;
     int x;
     int x_of_map;
     int y_of_map;
+    int longest_line;
 } t_all;
 void get_map(t_all **all, int fd);
 int check_errors(char **map);

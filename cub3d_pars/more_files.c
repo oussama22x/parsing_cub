@@ -7,7 +7,9 @@ void init_all(t_all **all)
     (*all)->y_of_map = 0;;
     (*all)->player_angel = 0;
     (*all)->map = NULL;
+    (*all)->longest_line = 0;
 }
+
 void count_x_y_of_the_map(t_all **all)
 {
     while((*all)->map[(*all)->y_of_map])
@@ -89,6 +91,8 @@ int check_extionts(char *argv)
     int i;
     i = 0;
     if(argv[0] == '.')
+        i++;
+    if(argv[1] == '.')
         i++;
     while(argv[i])
     {
